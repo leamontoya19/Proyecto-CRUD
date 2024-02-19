@@ -1,6 +1,6 @@
-import { Sequelize } from 'sequelize'
+import { Sequelize } from "sequelize";
 //importante poner contraseña si se le tiene alguna al servidor
-const db = new Sequelize ('database_app', 'root','@VaiAvanti6219',{
+const db = new Sequelize ('database_app', 'root','root',{
     host: 'localhost',
     dialect:'mysql'
 })

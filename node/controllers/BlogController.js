@@ -5,7 +5,8 @@ import BlogModel from "../models/BlogModel.js";
 
 //Mostrar todos los registros
 //lo primero que se hace es crear un func. async con los métodos 'request y response'
- export const getAllBlogs = async (req, res) => {
+
+export const getAllBlogs = async ( req, res) => {
     try{
         const blogs = await BlogModel.findAll()
         res.json(blogs)
@@ -19,10 +20,7 @@ import BlogModel from "../models/BlogModel.js";
 export const getBlog = async( req, res)=>{
     try {
         const blog = await BlogModel.findAll({
-            where:{
-                id:req.params.id 
-            }
-
+            where:{ id:req.params.id }
         })
         res.json(blog [0])
     } catch (error) {
